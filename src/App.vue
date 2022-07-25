@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
+import SQLFrames from "./components/sqlframes/sqlframes.vue";
+import REPL from "./components/sqlframes/repl.vue";
+import SampleApp from "./components/sqlframes/sample_app.vue";
 </script>
 
 <template>
@@ -24,6 +27,12 @@ import HelloWorld from "./components/HelloWorld.vue";
   </header>
 
   <RouterView />
+  <div style="width: 45vw">
+    <SQLFrames>
+      <REPL />
+      <SampleApp />
+    </SQLFrames>
+  </div>
 </template>
 
 <style scoped>
